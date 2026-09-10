@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  check:
+    name: 仓库完整性检查
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 检查关键文件是否存在
+        run: |
+          for f in README.md LICENSE .gitignore; do
+            if [ -f "$f" ]; then
+              echo "✔ $f 存在"
+            else
+              echo "✘ $f 缺失"
+              exit 1
+            fi
+          done
+
+      - name: 检查是否误提交了敏感文件
+        run: |
+          if git ls-files | grep -qE '\.env$|\.pem$|id_rsa|password'; then
+            echo "⚠ 发现疑似敏感文件，请检查！"
+            git ls-files | grep -E '\.env$|\.pem$|id_rsa|password'
+            exit 1
+          fi
+          echo "✔ 未发现敏感文件"
