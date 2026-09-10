@@ -1,5 +1,7 @@
 # AAAguosai
 
+> 🏁 比赛协作项目 · 详细操作手册见 [COLLABORATION-GUIDE.md](COLLABORATION-GUIDE.md)
+
 比赛协作项目仓库。
 
 ## 项目简介
