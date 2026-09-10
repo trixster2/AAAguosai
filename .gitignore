@@ -1,26 +1,43 @@
-# 依赖 / 构建产物
+# ===== 依赖 / 构建产物 =====
 node_modules/
 dist/
 build/
 out/
 target/
 *.class
+*.jar
+*.war
 
-# 环境与配置
-.env
-.env.local
-*.local
-
-# 编辑器 / 系统文件
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# 日志与临时文件
-*.log
-*.tmp
+# Python
 __pycache__/
 *.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# ===== 环境与配置 =====
+.env
+.env.*
+!.env.example
+*.local
+config.local.*
+
+# ===== 编辑器 / IDE =====
+.vscode/
+.idea/
+*.iml
+.vscode-server/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== 日志与临时文件 =====
+*.log
+*.tmp
+*.swp
 .cache/
 .tmp/
+coverage/
