@@ -108,8 +108,8 @@ refactor:重构
 - 比赛期间保持私有；赛后可自行决定是否公开
 
 ## 10. 本仓库痕迹速览（证据）
-- Issues：#1（已关闭）、#2（已关闭）、#3
-- PR：#4（merge）、#5（squash）、#6（rebase）
+- Issues：#1（已关闭）、#2（已关闭）、#3（已关闭）
+- PR：#4（merge commit）、#5（squash）、#6（rebase）、#7（merge commit，CI）
 - 行内审查评论：PR #4 README.md 第 31 行
-- CI 运行记录：Actions 标签页
+- CI 运行记录：Actions 标签页（push 与 PR 共 2 次运行，全部 ✓ success）
 - Release：v0.1.0
